@@ -1,4 +1,4 @@
-# Frontiers_paper
+# Frontiers paper
 
 ***
 
