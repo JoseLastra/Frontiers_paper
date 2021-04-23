@@ -13,7 +13,6 @@ library(tidyverse)
 library(lubridate)
 library(scales)
 library(raster)
-library(rasterVis)
 #####################################################################
 #stack data
 ndsi <- stack('Landsat_SnowBrick.tif')

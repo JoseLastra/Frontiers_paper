@@ -10,11 +10,9 @@ setwd("working path")
 ## libraries
 library(tidyverse)
 library(lubridate)
-library(scales)
 library(raster)
 library(rgdal)
 library(sf)
-library(rasterVis)
 ####################################################################
 #read data
 inpath <- 'folder with NDSI images/' #path to raw NDSI images
@@ -27,7 +25,7 @@ shp <- read_sf('folder with extent shapefile') %>%
 ####################################################################
 ## ouput names
 ndsiNames <- list.files(path = inpath,pattern = glob2rx('ndsi*.tif'),full.names = F)#extract filenames
-outnames <- paste('03_ndsi_mask/mask_',ndsiNames,sep = '')
+outnames <- paste('FOLDER/mask_',ndsiNames,sep = '')
 
 ####################################################################
 ## writing binary files
