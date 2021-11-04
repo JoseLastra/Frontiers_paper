@@ -41,7 +41,9 @@ SnowProbMap <-
       colnames(data2)<-c("season","snow")
       data2 <- na.omit(data2)
       data2$season <- factor(data2$season)
-      
+      if(nrow(data2) <= 1){ #Ajuste realizado para exceso de NA's
+  return(rep(NA,4))
+}
       #----------------------------------------------------------------------------------------
       # glm to calculate prob of having snow at a given season
       # for output interpretation visit http://www.ats.ucla.edu/stat/r/dae/logit.htm
